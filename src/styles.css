@@ -1266,11 +1266,11 @@ h4:after {
     font-size: small;
   }
   .header-wrap h5::before{
-    left: -10vh;
+    left: -13vh;
     top: 6px;
   }
   .header-wrap h5::after{
-    right: -10vh;
+    right: -13vh;
     top: 6px;
   }
   .comingsoonModal{
