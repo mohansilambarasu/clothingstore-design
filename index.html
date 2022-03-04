@@ -1,0 +1,842 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="src\styles.css">
+
+    <!-- Google fonts -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Herr+Von+Muellerhoff&family=Kalam:wght@300&family=Pacifico&family=Poppins&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Charm&family=Dancing+Script:wght@700&family=Herr+Von+Muellerhoff&family=Kalam:wght@300&family=Pacifico&family=Poppins&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Charm&family=Dancing+Script:wght@700&family=Herr+Von+Muellerhoff&family=Kalam:wght@300&family=Nothing+You+Could+Do&family=Pacifico&family=Poppins&display=swap" rel="stylesheet">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/adb071556a.js" crossorigin="anonymous"></script>
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Haute - Fahion Store</title>
+  </head>
+  <body>
+    <div class="loader-wrapper">
+      <div class="loader"></div>
+      <div class="loader"></div>
+      <div class="loader"></div>
+    </div>
+
+    <section class="mainhomeSection" id="home">
+      <div class="mainhomeContainer">
+        <div class="navContainer">
+          <nav class="navbar navbar-expand-sm  navbar-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#home">Haute</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#featured">Featured</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#latest">New Arrivals</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#categories">Categories</a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                  <!-- <li class="nav-item login-nav-item">
+                    <a class="nav-link" aria-current="page" href="#homeSection">Login</a>
+                  </li> -->
+                  <li class="nav-item login-nav-item">
+                    <a class="nav-link darkmode navCart" aria-current="page" style="font-size:x-large;"><i class="fa-solid fa-bag-shopping"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="mainhomeRow">
+          <div class="slides slidenew">
+            <span data-aos="fade-up" data-aos-duration="600" data-aos-delay="300" > Need A &nbsp </span>
+            <div class="mainhomeCols" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+              <ul>
+                <li>Formal Wear ?</li>
+                <li>Casual Wear ?</li>
+                <li>Stylish Wallet ?</li>
+                <li>Fashion Expert?</li>
+              </ul>
+            </div>
+          </div>
+          <br>
+          <div class="slides slidenew slidenew2">
+            <span data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="900">You're at the right Place</span>
+          </div>
+          <a class="homeBtn" href="#home2" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="900">EXPLORE NOW</a>
+        </div>
+      </div>
+    </section>
+    <!-- Home Section -->
+    <section class="homeSection2">
+      <div class="homeContainer" id="home2">
+        <div class="homerow row">
+          <div class="homeCols col-xl-5 col-lg-5 col-md-6 col-sm-5">
+            <div class="homebgContent">
+              <h5 data-aos="fade-up" data-aos-duration="600" data-aos-delay="300" >UPTO 30% OFF</h5>
+              <h1 data-aos="zoom-in" data-aos-duration="700">SUMMER '22</h1>
+              <a href="#featured" class="btn btn-outline-dark" type="button" name="button" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">SHOP NOW</a>
+            </div>
+          </div>
+          <div class="homeCols col-xl-7 col-lg-7 col-md-6 col-sm-7">
+            <div class="homePics">
+              <img src="src\Images\homebgg.png" alt="" data-aos="fade-up" data-aos-duration="800">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Add cart Notification Alert -->
+    <div class="NotificationBox">
+      <div class="notifyBox addedCartNot">
+        <span><i class="fa-solid fa-circle-check"></i> </span>
+        Added Successfully!
+      </div>
+    </div>
+
+    <!-- Removed Notification Alert -->
+    <div class="NotificationBox">
+      <div class="notifyBox removedCart">
+        <span><i class="fa-solid fa-circle-check"></i> </span>
+        Removed Successfully!
+      </div>
+    </div>
+
+
+    <!-- Shopping Cart -->
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-dialog modal-dialog-scrollable">
+        <div class="modal-content modalOne">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalToggleLabel">Preview</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="previewContainer modalOne">
+              <div class="previewImg">
+                <img src="src\Images\product_img2.jpg" class="img-fluid rounded-start previewPic" alt="...">
+              </div>
+              <div class="previewContent">
+                <div class="card-body">
+                  <h5 class="previewName">Card title</h5>
+                  <p class="previewCat">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="prodPrice prevProdPrice">
+                    <div class="prodPricedetails prodPriceFinal">
+                      <p class="previewFinalp"></p>
+                    </div>
+                    <div class="prodPricedetails prodPriceOrg">
+                      <p class="previewOldp">₹ 1299</p>
+                    </div>
+                    <div class="prodPricedetails prodPriceOff">
+                      <p class="previewDis">(20%)</p>
+                    </div>
+                  </div>
+                  <div class="counter">
+                    <div class="counterdiv">
+                      <span> <button class="btn btn-outline-dark counterMinus sizes" type="button" name="button">-</button></span>
+                      <span class="counterNum"> 1 </span>
+                      <span> <button class="btn btn-outline-dark counterPlus sizes" type="button" name="button">+</button></span>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="prevSize">
+                    Size
+                    <br>
+                    <span> <button class="btn btn-outline-dark sizes" type="button" name="button">XS</button></span>
+                    <span> <button class="btn btn-outline-dark sizes" type="button" name="button">S</button></span>
+                    <span> <button class="btn btn-outline-dark sizes" type="button" name="button">M</button></span>
+                    <span> <button class="btn btn-outline-dark sizes" type="button" name="button">L</button></span>
+                    <span> <button class="btn btn-outline-dark sizes" type="button" name="button">XL</button></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="viewCart">View Cart</a>
+            <button class="btn btn-outline-success cartBtn" type="button" name="button">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- View Cart -->
+    <div class="modal fade" id="exampleModalToggle4" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content viewModal">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalToggleLabel">My Cart</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="vCart">
+              <ul id="myList1" class="removalList1">
+                Name
+              </ul>
+              <ul id="myList2" class="removalList2">
+                Qty.
+              </ul>
+              <ul id="myList3" class="removalList3">
+                Price
+              </ul>
+              <ul id="myList4" class="removalList4">
+                Total
+              </ul>
+              <ul id="myList5" class="removalList5" style="display:flex; flex-direction:column">
+                Remove
+              </ul>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-success orderNowBtn" data-bs-target="#exampleModalToggle5" data-bs-toggle="modal" data-bs-dismiss="modal">Order Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="exampleModalToggle5" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content modalTwo comingsoonModal">
+          <div class="modal-header">
+          </div>
+          <div class="modal-body">
+            <!-- Coming Soon -->
+            <div class="comingSoonSection">
+              <div class="comingsoon">
+                <div class="comingsoonContents header-wrap">
+                  <h5>Our Complete Website</h5>
+                </div>
+                <br>
+                <div class="comingsoonContents content-wrap">
+                  <h2>COMING SOON</h2>
+                </div>
+                <br>
+                <div class="comingsoonContents footer-wrap">
+                  <h3>Follow Us</h3>
+                  <!-- <p>for regular updates</p> -->
+
+                  <div class="footerLogos">
+                    <span> <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></span>
+                    <span> <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></span>
+                    <span> <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- No Items -->
+    <div class="modal fade" id="exampleModalToggl6" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content modalTwo modalThree">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalToggleLabel2">My Cart</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img class="sadface" src="https://cdn-icons-png.flaticon.com/512/742/742752.png" alt="">
+            <img class="happyface" src="https://cdn-icons-png.flaticon.com/512/742/742923.png" alt="">
+            <br><br>
+             <span class="wishadd">Currently, there are no items.</span>
+          </div>
+          <div class="modal-footer">
+            <a class="nav-link navStart" aria-current="page" href="#featured">Start Shopping!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wish list -->
+    <div class="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content modalTwo wishModal">
+          <div class="modal-header">
+            <!-- <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5> -->
+            <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+          </div>
+          <div class="modal-body">
+            <img src="src\Images\wishlist.png" alt="">
+            <br><br>
+             <span class="wishadd">Product added to Wishlist!</span>
+            <!-- <br> <br>
+            <a href="#" class="viewCart">My Wishlist</a> -->
+          </div>
+          <div class="modal-footer">
+            <!-- <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back</button> -->
+            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured Products -->
+    <section class="featured" id="featured">
+      <div class="featuredContainer">
+        <div class="featured-top">
+          <h3 data-aos="zoom-in" data-aos-duration="600">Featured Products</h3>
+        </div>
+        <div class="prodbox">
+          <div class="card prodCard">
+            <div class="prodPic" data-aos="zoom-in" data-aos-duration="600">
+              <img src="src\Images\f6.jpg" alt="">
+              <div class="wishlist">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </div>
+            <div class="prodContent" data-aos="fade-up" data-aos-duration="600">
+              <h3>Haute Dual Shirt</h3>
+              <p class="text-muted" >Men's Shirts</p>
+            </div>
+            <div class="prodPrice" data-aos="fade-up" data-aos-duration="600">
+              <div class="prodPricedetails prodPriceFinal">
+                <p>₹ 1039</p>
+              </div>
+              <div class="prodPricedetails prodPriceOrg">
+                <p>₹ 1299</p>
+              </div>
+              <div class="prodPricedetails prodPriceOff">
+                <p>(20%)</p>
+              </div>
+            </div>
+          </div>
+          <div class="card prodCard">
+            <div class="prodPic" data-aos="zoom-in" data-aos-duration="600">
+              <img src="src\Images\3.jpg" alt="">
+              <div class="wishlist">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </div>
+            <div class="prodContent" data-aos="fade-up" data-aos-duration="600">
+              <h3>Haute Watch</h3>
+              <p class="text-muted" >Women's Watch</p>
+            </div>
+            <div class="prodPrice" data-aos="fade-up" data-aos-duration="600">
+              <div class="prodPricedetails prodPriceFinal">
+                <p>₹ 1149</p>
+              </div>
+              <div class="prodPricedetails prodPriceOrg">
+                <p>₹ 2299</p>
+              </div>
+              <div class="prodPricedetails prodPriceOff">
+                <p>(50%)</p>
+              </div>
+            </div>
+          </div>
+          <div class="card prodCard">
+            <div class="prodPic" data-aos="zoom-in" data-aos-duration="600">
+              <img src="src\Images\f2.jpg" alt="">
+              <div class="wishlist">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </div>
+            <div class="prodContent" data-aos="fade-up" data-aos-duration="600">
+              <h3>Haute pattern Shirt</h3>
+              <p class="text-muted" >Unisex Shirts</p>
+            </div>
+            <div class="prodPrice" data-aos="fade-up" data-aos-duration="600">
+              <div class="prodPricedetails prodPriceFinal">
+                <p>₹ 999</p>
+              </div>
+              <div class="prodPricedetails prodPriceOrg">
+                <p>₹ 1999</p>
+              </div>
+              <div class="prodPricedetails prodPriceOff">
+                <p>(50%)</p>
+              </div>
+            </div>
+          </div>
+          <div class="card prodCard">
+            <div class="prodPic" data-aos="zoom-in" data-aos-duration="600">
+              <img src="src\Images\f8.jpg" alt="">
+              <div class="wishlist">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </div>
+            <div class="prodContent" data-aos="fade-up" data-aos-duration="600">
+              <h3>Haute Casual Dress</h3>
+              <p class="text-muted" >Women's Dress</p>
+            </div>
+            <div class="prodPrice" data-aos="fade-up" data-aos-duration="600">
+              <div class="prodPricedetails prodPriceFinal">
+                <p>₹ 1249</p>
+              </div>
+              <div class="prodPricedetails prodPriceOrg">
+                <p>₹ 2499</p>
+              </div>
+              <div class="prodPricedetails prodPriceOff">
+                <p>(50%)</p>
+              </div>
+            </div>
+          </div>
+          <div class="card prodCard">
+            <div class="prodPic" data-aos="zoom-in" data-aos-duration="600">
+              <img src="src\Images\6.jpg" alt="">
+              <div class="wishlist">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </div>
+            <div class="prodContent" data-aos="fade-up" data-aos-duration="600">
+              <h3>Haute Sweater</h3>
+              <p class="text-muted" >Winter Collection</p>
+            </div>
+            <div class="prodPrice" data-aos="fade-up" data-aos-duration="600">
+              <div class="prodPricedetails prodPriceFinal">
+                <p>₹ 1999</p>
+              </div>
+              <div class="prodPricedetails prodPriceOrg">
+                <p>₹ 2499</p>
+              </div>
+              <div class="prodPricedetails prodPriceOff">
+                <p>(20%)</p>
+              </div>
+            </div>
+          </div>
+          <div class="card prodCard">
+            <div class="prodPic" data-aos="zoom-in" data-aos-duration="600">
+              <img src="src\Images\n6.jpg" alt="">
+              <div class="wishlist">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </div>
+            <div class="prodContent" data-aos="fade-up" data-aos-duration="600">
+              <h3>Haute Gray Trouser</h3>
+              <p class="text-muted" >Men's Trouser</p>
+            </div>
+            <div class="prodPrice" data-aos="fade-up" data-aos-duration="600">
+              <div class="prodPricedetails prodPriceFinal">
+                <p>₹ 999</p>
+              </div>
+              <div class="prodPricedetails prodPriceOrg">
+                <p>₹ 1999</p>
+              </div>
+              <div class="prodPricedetails prodPriceOff">
+                <p>(50%)</p>
+              </div>
+            </div>
+          </div>
+          <div class="card prodCard">
+            <div class="prodPic" data-aos="zoom-in" data-aos-duration="600">
+              <img src="src\Images\25.jpg" alt="">
+              <div class="wishlist">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </div>
+            <div class="prodContent" data-aos="fade-up" data-aos-duration="600">
+              <h3>Haute Cool Tshirts</h3>
+              <p class="text-muted" >Men's T-Shirts</p>
+            </div>
+            <div class="prodPrice" data-aos="fade-up" data-aos-duration="600">
+              <div class="prodPricedetails prodPriceFinal">
+                <p>₹ 1149</p>
+              </div>
+              <div class="prodPricedetails prodPriceOrg">
+                <p>₹ 2299</p>
+              </div>
+              <div class="prodPricedetails prodPriceOff">
+                <p>(50%)</p>
+              </div>
+            </div>
+          </div>
+          <div class="card prodCard">
+            <div class="prodPic" data-aos="zoom-in" data-aos-duration="600">
+              <img src="src\Images\5.jpg" alt="">
+              <div class="wishlist">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </div>
+            <div class="prodContent" data-aos="fade-up" data-aos-duration="600">
+              <h3>Haute Brown Shoes</h3>
+              <p class="text-muted" >Classic Footwear</p>
+            </div>
+            <div class="prodPrice" data-aos="fade-up" data-aos-duration="600">
+              <div class="prodPricedetails prodPriceFinal">
+                <p>₹ 1039</p>
+              </div>
+              <div class="prodPricedetails prodPriceOrg">
+                <p>₹ 1299</p>
+              </div>
+              <div class="prodPricedetails prodPriceOff">
+                <p>(20%)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mid Banner Section -->
+    <section class="midbannerSection">
+      <div class="midbannerContainer">
+        <div class="midbanner row">
+          <div class="midbannerCols col-xl-6 col-lg-6 col-md-7 col-sm-7 col-12">
+            <div class="homeContent midbannerContent">
+              <h5 data-aos="fade-up" data-aos-duration="600" >UPTO 50% OFF</h5>
+              <h1 data-aos="fade-up" data-aos-duration="600" >END OF SEASON SALE</h1>
+              <div class="shopBtn" data-aos="zoom-in" data-aos-duration="600">
+                <a href="#latest">SHOP NOW</a>
+              </div>
+            </div>
+          </div>
+          <div class="midbannerCols col-4">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Latest Products -->
+    <section class="featured" id="latest">
+      <div class="featuredContainer">
+        <div class="featured-top">
+          <h3 data-aos="zoom-in" data-aos-duration="600">New Arrivals</h3>
+        </div>
+        <div class="prodbox">
+          <div class="card prodCard">
+            <div class="prodPic" data-aos="zoom-in" data-aos-duration="600">
+              <img src="src\Images\product_img6.jpg" alt="">
+              <div class="wishlist">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </div>
+            <div class="prodContent" data-aos="fade-up" data-aos-duration="600">
+              <h3>Haute pattern Shirt</h3>
+              <p class="text-muted" >Men's Shirt</p>
+            </div>
+            <div class="prodPrice" data-aos="fade-up" data-aos-duration="600">
+              <div class="prodPricedetails prodPriceFinal">
+                <p>₹ 1249</p>
+              </div>
+              <div class="prodPricedetails prodPriceOrg">
+                <p>₹ 2499</p>
+              </div>
+              <div class="prodPricedetails prodPriceOff">
+                <p>(50%)</p>
+              </div>
+            </div>
+          </div>
+          <div class="card prodCard">
+            <div class="prodPic" data-aos="zoom-in" data-aos-duration="600">
+              <img src="src\Images\product_img8.jpg" alt="">
+              <div class="wishlist">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </div>
+            <div class="prodContent" data-aos="fade-up" data-aos-duration="600">
+              <h3>Haute Blue Jeans</h3>
+              <p class="text-muted" >Men's Jacket</p>
+            </div>
+            <div class="prodPrice" data-aos="fade-up" data-aos-duration="600">
+              <div class="prodPricedetails prodPriceFinal">
+                <p>₹ 1999</p>
+              </div>
+              <div class="prodPricedetails prodPriceOrg">
+                <p>₹ 2499</p>
+              </div>
+              <div class="prodPricedetails prodPriceOff">
+                <p>(20%)</p>
+              </div>
+            </div>
+          </div>
+          <div class="card prodCard">
+            <div class="prodPic" data-aos="zoom-in" data-aos-duration="600">
+              <img src="src\Images\product_img9.jpg" alt="">
+              <div class="wishlist">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </div>
+            <div class="prodContent" data-aos="fade-up" data-aos-duration="600">
+              <h3>Haute White Tops</h3>
+              <p class="text-muted" >Women's Tops</p>
+            </div>
+            <div class="prodPrice" data-aos="fade-up" data-aos-duration="600">
+              <div class="prodPricedetails prodPriceFinal">
+                <p>₹ 1039</p>
+              </div>
+              <div class="prodPricedetails prodPriceOrg">
+                <p>₹ 1299</p>
+              </div>
+              <div class="prodPricedetails prodPriceOff">
+                <p>(20%)</p>
+              </div>
+            </div>
+          </div>
+          <div class="card prodCard">
+            <div class="prodPic" data-aos="zoom-in" data-aos-duration="600">
+              <img src="src\Images\product_img10.jpg" alt="">
+              <div class="wishlist">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </div>
+            <div class="prodContent" data-aos="fade-up" data-aos-duration="600">
+              <h3>Haute Shirt Combo</h3>
+              <p class="text-muted" >Men's Combo</p>
+            </div>
+            <div class="prodPrice" data-aos="fade-up" data-aos-duration="600">
+              <div class="prodPricedetails prodPriceFinal">
+                <p>₹ 1149</p>
+              </div>
+              <div class="prodPricedetails prodPriceOrg">
+                <p>₹ 2299</p>
+              </div>
+              <div class="prodPricedetails prodPriceOff">
+                <p>(50%)</p>
+              </div>
+            </div>
+          </div>
+          <div class="card prodCard">
+            <div class="prodPic" data-aos="zoom-in" data-aos-duration="600">
+              <img src="src\Images\product_img2.jpg" alt="">
+              <div class="wishlist">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </div>
+            <div class="prodContent" data-aos="fade-up" data-aos-duration="600">
+              <h3>Haute Brown Coat</h3>
+              <p class="text-muted" >Men's Over Coat</p>
+            </div>
+            <div class="prodPrice" data-aos="fade-up" data-aos-duration="600">
+              <div class="prodPricedetails prodPriceFinal">
+                <p>₹ 1499</p>
+              </div>
+              <div class="prodPricedetails prodPriceOrg">
+                <p>₹ 2499</p>
+              </div>
+              <div class="prodPricedetails prodPriceOff">
+                <p>(40%)</p>
+              </div>
+            </div>
+          </div>
+          <div class="card prodCard">
+            <div class="prodPic" data-aos="zoom-in" data-aos-duration="600">
+              <img src="src\Images\product_img12.jpg" alt="">
+              <div class="wishlist">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </div>
+            <div class="prodContent" data-aos="fade-up" data-aos-duration="600">
+              <h3>Haute Black T-shirt</h3>
+              <p class="text-muted" >Women's T-shirts</p>
+            </div>
+            <div class="prodPrice" data-aos="fade-up" data-aos-duration="600">
+              <div class="prodPricedetails prodPriceFinal">
+                <p>₹ 1199</p>
+              </div>
+              <div class="prodPricedetails prodPriceOrg">
+                <p>₹ 1999</p>
+              </div>
+              <div class="prodPricedetails prodPriceOff">
+                <p>(40%)</p>
+              </div>
+            </div>
+          </div>
+          <div class="card prodCard">
+            <div class="prodPic" data-aos="zoom-in" data-aos-duration="600">
+              <img src="src\Images\product_img3.jpg" alt="">
+              <div class="wishlist">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </div>
+            <div class="prodContent" data-aos="fade-up" data-aos-duration="600">
+              <h3>Haute Green Dress</h3>
+              <p class="text-muted" >Women Casuals</p>
+            </div>
+            <div class="prodPrice" data-aos="fade-up" data-aos-duration="600">
+              <div class="prodPricedetails prodPriceFinal">
+                <p>₹ 1379</p>
+              </div>
+              <div class="prodPricedetails prodPriceOrg">
+                <p>₹ 2299</p>
+              </div>
+              <div class="prodPricedetails prodPriceOff">
+                <p>(40%)</p>
+              </div>
+            </div>
+          </div>
+          <div class="card prodCard">
+            <div class="prodPic" data-aos="zoom-in" data-aos-duration="600">
+              <img src="src\Images\product_img4.jpg" alt="">
+              <div class="wishlist">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </div>
+            <div class="prodContent" data-aos="fade-up" data-aos-duration="600">
+              <h3>Haute Kids Combo</h3>
+              <p class="text-muted" >Kid's Shirt</p>
+            </div>
+            <div class="prodPrice" data-aos="fade-up" data-aos-duration="600">
+              <div class="prodPricedetails prodPriceFinal">
+                <p>₹ 999</p>
+              </div>
+              <div class="prodPricedetails prodPriceOrg">
+                <p>₹ 1999</p>
+              </div>
+              <div class="prodPricedetails prodPriceOff">
+                <p>(50%)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories" id="categories">
+      <div class="featured-top">
+        <h3 data-aos="zoom-in" data-aos-duration="600">Categories</h3>
+      </div>
+      <div class="categoryContainer">
+        <div class="categoryCols categoryCols1">
+          <h3 data-aos="fade-up" data-aos-duration="600">Women's Wear</h3>
+          <p data-aos="zoom-in" data-aos-duration="850">view all</p>
+        </div>
+        <div class="categoryCols categoryCols2">
+          <h3 data-aos="fade-up" data-aos-duration="600">Men's Wear</h3>
+          <p data-aos="zoom-in" data-aos-duration="850">view all</p>
+        </div>
+        <div class="categoryCols categoryCols3">
+          <h3 data-aos="fade-up" data-aos-duration="600">Kid's Wear</h3>
+          <p data-aos="zoom-in" data-aos-duration="850">view all</p>
+        </div>
+        <div class="categoryCols categoryCols4">
+          <h3 data-aos="fade-up" data-aos-duration="600">FootWear</h3>
+          <p data-aos="zoom-in" data-aos-duration="850">view all</p>
+        </div>
+        <div class="categoryCols categoryCols5">
+          <h3 data-aos="fade-up" data-aos-duration="600">Formal Wear</h3>
+          <p data-aos="zoom-in" data-aos-duration="850">view all</p>
+        </div>
+        <div class="categoryCols categoryCols6">
+          <p data-aos="fade-up" data-aos-duration="600">And lot more exciting items!</p>
+          <div class="vmore" data-aos="zoom-in" data-aos-duration="850">
+            <a href="#" data-bs-target="#exampleModalToggle5" data-bs-toggle="modal" data-bs-dismiss="modal">View More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- News -->
+    <section class="news" id="news">
+      <div class="newsContainer">
+        <div class="newsCol">
+          <div class="newsContent newsHead">
+            <div class="featured-top" data-aos="zoom-in" data-aos-duration="600">
+              <h3>Our NewsLetter</h3>
+            </div>
+            <h6 data-aos="fade-up" data-aos-duration="850">Subscribe to get regular updates on item & <span>offers</span> </h6>
+          </div>
+        </div>
+        <div class="newsCol">
+          <div class="newsContent newsform" data-aos="zoom-in" data-aos-duration="850">
+            <form action="" name="myForm" id="contactForm">
+              <div class="search-item">
+                <input type="email" name="fname" placeholder="Enter your email">
+                <button class="btn btn-primary newsBtn" type="button" name="button" value="">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Removed Notification Alert -->
+    <div class="NotificationBox">
+      <div class="notifyBox newsSub">
+        <span><i class="fa-solid fa-circle-check"></i> </span>
+        <span class="newsSubContent" >Thanks for Choosing us! Mail sent.</span>
+      </div>
+    </div>
+
+    <!-- contactSection -->
+    <section class="contactSection" id="contact" >
+      <div class="contactContainer">
+        <div class="contactRows row">
+          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-6 contactCols contactSoon">
+            <div class="contactContentone">
+              <h3>About us</h3>
+              <ul>
+                <li>Delivery info</li>
+                <li>Privacy Policy</li>
+                <li>Terms & Conditions</li>
+                <li>Careers</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-6 contactCols contactSoon">
+            <div class="contactContentone">
+              <h3>Help</h3>
+              <ul>
+                <li>Track Order</li>
+                <li>Returns & Refunds</li>
+                <li>FAQs</li>
+                <li>My Account</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-6 contactCols">
+            <div class="contactContenttwo">
+              <h3>Quick Links</h3>
+              <ul>
+                <li> <a href="#home">Home</a> </li>
+                <li> <a href="#featured">Featured</a> </li>
+                <li> <a href="#latest">New Arrivals</a> </li>
+                <li> <a href="#categories">Categories</a> </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-6 contactCols">
+            <div class="contactContentthree">
+              <h3>Contact us</h3>
+              <ul>
+                <li>+91 2192390XXX</li>
+                <li>info@Haute.com</li>
+              </ul>
+              <span> <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></span>
+              <span> <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></span>
+              <span> <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="src\script.js" type="text/javascript">
+
+    </script>
+  </body>
+</html>
