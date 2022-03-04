@@ -886,11 +886,11 @@ h4:after {
     height: 55vh;
   }
 }
-@media screen and (min-width:1440px) {
+/* @media screen and (min-width:1440px) {
   .prodPic{
     height: 125vh;
   }
-}
+} */
 @media screen and (max-width:1075px) {
   .circle{
     transform: translate(35%,83%) rotate(90deg);
